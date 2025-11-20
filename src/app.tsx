@@ -1,18 +1,10 @@
-
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
+import MiniEditor from "./components/scene";
+import GeminiEditor from "./components/another-scene";
+import YetScene from "./components/yet-scene";
 export const App = () => {
-    return (
-        <Canvas>
-            <mesh>
-                <OrbitControls />
-                <PerspectiveCamera makeDefault position={[0, 0, 5]} />
-                <ambientLight />
-                <pointLight position={[10, 10, 10]} />
-                <boxGeometry />
-                <meshStandardMaterial color="lightgreen" />
-                <cylinderGeometry  args={[1,2,4,10]}/>
-            </mesh>
-        </Canvas>
-    );
-}
+  // <Canvas camera={{ position: [10, 10, 10], fov: 50 }}>
+  //   <MiniEditor/>
+  // </Canvas>
+  // return <GeminiEditor />;
+  return <YetScene />;
+};
